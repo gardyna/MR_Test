@@ -1,12 +1,14 @@
 #nullable enable
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using DG.Tweening;
 
 
 [RequireComponent(typeof(XRGrabInteractable))]
 public class InfoBoxGrabable : MonoBehaviour
 {
     [SerializeField] private GameObject infoPopup = null!;
+    private Tweener popupTween = null!;
     private void Start()
     {
         var grabber = GetComponent<XRGrabInteractable>();
@@ -20,12 +22,31 @@ public class InfoBoxGrabable : MonoBehaviour
         if (!args.interactorObject.transform.CompareTag("place"))
         {
             infoPopup.SetActive(true);
+            ShowPopup();
         }
     }
 
     private void OnGrabStop(SelectExitEventArgs arg0)
     {
         Debug.Log("Exit");
-        infoPopup.SetActive(false);
+        
+        HidePopup();
+    }
+
+    private void ShowPopup()
+    {
+        popupTween?.Kill();
+        
+        infoPopup.transform.localScale = Vector3.zero;
+        popupTween = infoPopup.transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.OutBack);
+    }
+
+    private void HidePopup()
+    {
+        popupTween?.Kill();
+        
+        popupTween = infoPopup.transform.DOScale(Vector3.zero, 0.1f)
+            .SetEase(Ease.OutSine)
+            .OnComplete(() => infoPopup.SetActive(false));
     }
 }
