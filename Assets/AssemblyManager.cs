@@ -20,15 +20,16 @@ public class AssemblyManager : MonoBehaviour
         {
             SoundManager.Instance.Play(clipIndex: 1);
             DOVirtual.DelayedCall(2f, () =>
+            {
+                animatedCatapult.SetActive(true);
+                catapultProject.SetActive(false);
+                foreach (var gameObject in catapultParts)
                 {
-                    animatedCatapult.SetActive(true);
-                    catapultProject.SetActive(false);
-                    foreach (var gameObject in catapultParts)
-                    {
-                        gameObject.SetActive(false);
-                    }
-                })
-                .OnComplete(() => CatapultAnimator.Instance.PlayAnimation(CatapultAnimation.Charge)).SetLoops(3);
+                    gameObject.SetActive(false);
+                }
+            });
+            DOVirtual.DelayedCall(2f,() => CatapultAnimator.Instance.PlayAnimation(CatapultAnimation.Charge)).SetLoops(3);
+            DOVirtual.DelayedCall(6f,() => CatapultAnimator.Instance.PlayAnimation(CatapultAnimation.Release)).SetLoops(3);
         }
     }
 
