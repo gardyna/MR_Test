@@ -20,8 +20,6 @@ public class SoundManager : MonoBehaviour
             Instance = this;
         }
     }
-    
-    private void Update() => ManageClips();
 
     /// <summary>
     /// Play AudioClip at index n in audioLibrary.

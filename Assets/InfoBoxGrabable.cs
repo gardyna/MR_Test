@@ -24,6 +24,10 @@ public class InfoBoxGrabable : MonoBehaviour
             infoPopup.SetActive(true);
             ShowPopup();
         }
+        else
+        {
+            HidePopup();
+        }
     }
 
     private void OnGrabStop(SelectExitEventArgs arg0)
