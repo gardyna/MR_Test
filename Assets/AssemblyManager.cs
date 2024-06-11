@@ -1,12 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class AssemblyManager : MonoBehaviour
 {
     [SerializeField] private List<XRSocketInteractor> socketValidators;
+    [SerializeField] private List<GameObject> catapultParts;
+    [SerializeField] private GameObject catapultProject;
+    [SerializeField] private GameObject animatedCatapult;
 
     public void CheckForWin()
     {
@@ -16,6 +19,16 @@ public class AssemblyManager : MonoBehaviour
         if (isWin)
         {
             SoundManager.Instance.Play(clipIndex: 1);
+            DOVirtual.DelayedCall(2f, () =>
+                {
+                    animatedCatapult.SetActive(true);
+                    catapultProject.SetActive(false);
+                    foreach (var gameObject in catapultParts)
+                    {
+                        gameObject.SetActive(false);
+                    }
+                })
+                .OnComplete(() => CatapultAnimator.Instance.PlayAnimation(CatapultAnimation.Charge)).SetLoops(3);
         }
     }
 

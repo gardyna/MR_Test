@@ -11,7 +11,7 @@ public enum CatapultAnimation
 }
 public class CatapultAnimator : MonoBehaviour
 {
-    private static CatapultAnimator Instance;
+    public static CatapultAnimator Instance;
     
     [Header("Catapult Parts")]
     [SerializeField] private Transform spoon;
