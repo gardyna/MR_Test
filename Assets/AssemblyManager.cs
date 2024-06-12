@@ -10,6 +10,7 @@ public class AssemblyManager : MonoBehaviour
     [SerializeField] private List<GameObject> catapultParts;
     [SerializeField] private GameObject catapultProject;
     [SerializeField] private GameObject animatedCatapult;
+    [SerializeField] private GameObject kahoot;
 
     public void CheckForWin()
     {
@@ -30,6 +31,8 @@ public class AssemblyManager : MonoBehaviour
             });
             DOVirtual.DelayedCall(2f,() => CatapultAnimator.Instance.PlayAnimation(CatapultAnimation.Charge)).SetLoops(3);
             DOVirtual.DelayedCall(10f,() => CatapultAnimator.Instance.PlayAnimation(CatapultAnimation.Release)).SetLoops(3);
+            DOVirtual.DelayedCall(10f, () => SoundManager.Instance.Play(clipIndex: 2));
+            DOVirtual.DelayedCall(10f, () => kahoot.SetActive(true));
         }
     }
 
