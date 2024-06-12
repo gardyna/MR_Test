@@ -43,6 +43,7 @@ public class InfoBoxGrabable : MonoBehaviour
         
         infoPopup.transform.localScale = Vector3.zero;
         popupTween = infoPopup.transform.DOScale(Vector3.one, 0.25f).SetEase(Ease.OutBack);
+        SoundManager.Instance.Play(clipIndex:5);
     }
 
     private void HidePopup()

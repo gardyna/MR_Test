@@ -66,6 +66,7 @@ public class CatapultAnimator : MonoBehaviour
 
     private void PullLever()
     {
+        SoundManager.Instance.Play(volume: 0.75f, clipIndex:3);
         lever.DORotate(new Vector3(lever.transform.localEulerAngles.x - 25f, lever.transform.localEulerAngles.y, lever.transform.localEulerAngles.z), 0.85f)
             .SetEase(Ease.OutSine);
         
@@ -100,6 +101,7 @@ public class CatapultAnimator : MonoBehaviour
 
     private void ReleaseTension()
     {
+        SoundManager.Instance.Play(clipIndex:4);
         tensionRelease.DORotate(new Vector3(12f, -90f, -90f), 0.1f).SetEase(Ease.OutBack);
         spoon.DORotate(spoonCache, 0.25f).SetEase(Ease.OutBounce);
         bigSprocket.DORotate(new Vector3(bigSprocketCache.x, bigSprocket.localEulerAngles.y, bigSprocket.localEulerAngles.z), 0.25f);
