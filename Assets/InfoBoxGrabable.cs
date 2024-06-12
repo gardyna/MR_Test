@@ -8,6 +8,7 @@ using DG.Tweening;
 public class InfoBoxGrabable : MonoBehaviour
 {
     [SerializeField] private GameObject infoPopup = null!;
+    [SerializeField] private Transform grabObject = null!;
     private Tweener popupTween = null!;
     private void Start()
     {
@@ -18,6 +19,7 @@ public class InfoBoxGrabable : MonoBehaviour
 
     private void OnGrabbed(SelectEnterEventArgs args)
     {
+        grabObject.DOPunchScale(grabObject.localScale * 0.15f, 0.15f).SetEase(Ease.OutBounce);
         Debug.Log($"I've been grabbed, {args.interactorObject.transform.gameObject.tag}");
         if (!args.interactorObject.transform.CompareTag("place"))
         {
