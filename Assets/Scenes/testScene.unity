@@ -744,6 +744,10 @@ PrefabInstance:
       propertyPath: infoPopup
       value: 
       objectReference: {fileID: 813387237}
+    - target: {fileID: 1154120527158243967, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
+      propertyPath: grabObject
+      value: 
+      objectReference: {fileID: 857931985}
     - target: {fileID: 3836798093204877310, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
       propertyPath: m_Drag
       value: 1
@@ -1820,6 +1824,10 @@ PrefabInstance:
       propertyPath: infoPopup
       value: 
       objectReference: {fileID: 1667915917}
+    - target: {fileID: 1154120527158243967, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
+      propertyPath: grabObject
+      value: 
+      objectReference: {fileID: 932487811}
     - target: {fileID: 3836798093204877310, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
       propertyPath: m_Drag
       value: 1
@@ -2192,6 +2200,10 @@ PrefabInstance:
       propertyPath: infoPopup
       value: 
       objectReference: {fileID: 1892975872}
+    - target: {fileID: 1154120527158243967, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
+      propertyPath: grabObject
+      value: 
+      objectReference: {fileID: 1283973393}
     - target: {fileID: 3836798093204877310, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
       propertyPath: m_Drag
       value: 1
