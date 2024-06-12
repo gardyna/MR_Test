@@ -329,6 +329,34 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5242143546369722892, guid: 9bbcf8d7b1ee25e4c8e825d5f7e6d2c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70703864
+      objectReference: {fileID: 0}
+    - target: {fileID: -5242143546369722892, guid: 9bbcf8d7b1ee25e4c8e825d5f7e6d2c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.70703876
+      objectReference: {fileID: 0}
+    - target: {fileID: -5242143546369722892, guid: 9bbcf8d7b1ee25e4c8e825d5f7e6d2c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.009812046
+      objectReference: {fileID: 0}
+    - target: {fileID: -5242143546369722892, guid: 9bbcf8d7b1ee25e4c8e825d5f7e6d2c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.009812046
+      objectReference: {fileID: 0}
+    - target: {fileID: -5242143546369722892, guid: 9bbcf8d7b1ee25e4c8e825d5f7e6d2c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 88.41
+      objectReference: {fileID: 0}
+    - target: {fileID: -5242143546369722892, guid: 9bbcf8d7b1ee25e4c8e825d5f7e6d2c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: -5242143546369722892, guid: 9bbcf8d7b1ee25e4c8e825d5f7e6d2c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 270
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9bbcf8d7b1ee25e4c8e825d5f7e6d2c2, type: 3}
       propertyPath: m_Name
       value: animatedCatapult
@@ -453,12 +481,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6532191620956235581, guid: 458d64e3ccc250a4e98a41796dd592f9, type: 3}
       propertyPath: audioLibrary.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6532191620956235581, guid: 458d64e3ccc250a4e98a41796dd592f9, type: 3}
       propertyPath: audioLibrary.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 95d6d044456ad409995289871e2a1b56, type: 3}
+    - target: {fileID: 6532191620956235581, guid: 458d64e3ccc250a4e98a41796dd592f9, type: 3}
+      propertyPath: audioLibrary.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f8b48b0e8c294a559a9880d50ababab, type: 3}
     - target: {fileID: 8005011357965047495, guid: 458d64e3ccc250a4e98a41796dd592f9, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -755,6 +787,17 @@ PrefabInstance:
     - target: {fileID: 6827996546435766908, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324749814421179930, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
+      propertyPath: m_text
+      value: 'Lever
+
+
+        Transforms force into mechanical advantage'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324749814421179930, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
+      propertyPath: m_fontSize
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7561974368982880043, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
       propertyPath: m_Enabled
@@ -1714,6 +1757,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7324749814421179930, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
+      propertyPath: m_text
+      value: 'Throwing arm
+
+
+        Stiff lever that holds a payload'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324749814421179930, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
+      propertyPath: m_fontSize
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 7561974368982880043, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2029,7 +2083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5225245484030088686, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5331870260370178299, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
       propertyPath: m_Enabled
@@ -2074,6 +2128,17 @@ PrefabInstance:
     - target: {fileID: 6827996546435766908, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324749814421179930, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
+      propertyPath: m_text
+      value: 'Ratchet
+
+
+        Toothed gear that only allows rotation in one direction'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7324749814421179930, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
+      propertyPath: m_fontSize
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7561974368982880043, guid: 869053af364a84d14be52dd84cfcdd83, type: 3}
       propertyPath: m_Enabled

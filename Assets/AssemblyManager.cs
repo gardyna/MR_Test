@@ -29,7 +29,7 @@ public class AssemblyManager : MonoBehaviour
                 }
             });
             DOVirtual.DelayedCall(2f,() => CatapultAnimator.Instance.PlayAnimation(CatapultAnimation.Charge)).SetLoops(3);
-            DOVirtual.DelayedCall(6f,() => CatapultAnimator.Instance.PlayAnimation(CatapultAnimation.Release)).SetLoops(3);
+            DOVirtual.DelayedCall(10f,() => CatapultAnimator.Instance.PlayAnimation(CatapultAnimation.Release)).SetLoops(3);
         }
     }
 
